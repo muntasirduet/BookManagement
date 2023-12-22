@@ -1,0 +1,12 @@
+/Users/mdmuntasirmahammud/RiderProjects/BookManagement/BookManagement.Model/bin/Debug/net8.0/BookManagement.Model.deps.json
+/Users/mdmuntasirmahammud/RiderProjects/BookManagement/BookManagement.Model/bin/Debug/net8.0/BookManagement.Model.dll
+/Users/mdmuntasirmahammud/RiderProjects/BookManagement/BookManagement.Model/bin/Debug/net8.0/BookManagement.Model.pdb
+/Users/mdmuntasirmahammud/RiderProjects/BookManagement/BookManagement.Model/obj/Debug/net8.0/BookManagement.Model.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mdmuntasirmahammud/RiderProjects/BookManagement/BookManagement.Model/obj/Debug/net8.0/BookManagement.Model.AssemblyInfoInputs.cache
+/Users/mdmuntasirmahammud/RiderProjects/BookManagement/BookManagement.Model/obj/Debug/net8.0/BookManagement.Model.AssemblyInfo.cs
+/Users/mdmuntasirmahammud/RiderProjects/BookManagement/BookManagement.Model/obj/Debug/net8.0/BookManagement.Model.csproj.CoreCompileInputs.cache
+/Users/mdmuntasirmahammud/RiderProjects/BookManagement/BookManagement.Model/obj/Debug/net8.0/BookManagement.Model.sourcelink.json
+/Users/mdmuntasirmahammud/RiderProjects/BookManagement/BookManagement.Model/obj/Debug/net8.0/BookManagement.Model.dll
+/Users/mdmuntasirmahammud/RiderProjects/BookManagement/BookManagement.Model/obj/Debug/net8.0/refint/BookManagement.Model.dll
+/Users/mdmuntasirmahammud/RiderProjects/BookManagement/BookManagement.Model/obj/Debug/net8.0/BookManagement.Model.pdb
+/Users/mdmuntasirmahammud/RiderProjects/BookManagement/BookManagement.Model/obj/Debug/net8.0/ref/BookManagement.Model.dll

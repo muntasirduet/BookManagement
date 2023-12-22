@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "BookManagement.Web/1.0.0": {
+        "dependencies": {
+          "BookManagement.Model": "1.0.0"
+        },
+        "runtime": {
+          "BookManagement.Web.dll": {}
+        }
+      },
+      "BookManagement.Model/1.0.0": {
+        "runtime": {
+          "BookManagement.Model.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BookManagement.Web/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BookManagement.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

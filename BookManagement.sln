@@ -2,6 +2,20 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookManagement.Web", "BookManagement.Web\BookManagement.Web.csproj", "{7A20FB25-6014-4F65-B830-54D06A082D6E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookManagement.Data", "BookManagement.Data\BookManagement.Data.csproj", "{4860CFBE-9299-49CE-8325-3C20954A9DA7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6940031A-F096-4AB2-8D47-CFF9C6D72E5A} = {6940031A-F096-4AB2-8D47-CFF9C6D72E5A}
+		{7A20FB25-6014-4F65-B830-54D06A082D6E} = {7A20FB25-6014-4F65-B830-54D06A082D6E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookManagement.Model", "BookManagement.Model\BookManagement.Model.csproj", "{6940031A-F096-4AB2-8D47-CFF9C6D72E5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookManagement.Console", "BookManagement.Console\BookManagement.Console.csproj", "{80A22C3E-6ED8-4E70-918F-9CCEF088C796}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4860CFBE-9299-49CE-8325-3C20954A9DA7} = {4860CFBE-9299-49CE-8325-3C20954A9DA7}
+		{6940031A-F096-4AB2-8D47-CFF9C6D72E5A} = {6940031A-F096-4AB2-8D47-CFF9C6D72E5A}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +26,17 @@ Global
 		{7A20FB25-6014-4F65-B830-54D06A082D6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A20FB25-6014-4F65-B830-54D06A082D6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A20FB25-6014-4F65-B830-54D06A082D6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4860CFBE-9299-49CE-8325-3C20954A9DA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4860CFBE-9299-49CE-8325-3C20954A9DA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4860CFBE-9299-49CE-8325-3C20954A9DA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4860CFBE-9299-49CE-8325-3C20954A9DA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6940031A-F096-4AB2-8D47-CFF9C6D72E5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6940031A-F096-4AB2-8D47-CFF9C6D72E5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6940031A-F096-4AB2-8D47-CFF9C6D72E5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6940031A-F096-4AB2-8D47-CFF9C6D72E5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80A22C3E-6ED8-4E70-918F-9CCEF088C796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80A22C3E-6ED8-4E70-918F-9CCEF088C796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80A22C3E-6ED8-4E70-918F-9CCEF088C796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80A22C3E-6ED8-4E70-918F-9CCEF088C796}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
