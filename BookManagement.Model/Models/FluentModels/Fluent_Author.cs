@@ -1,23 +1,18 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BookManagement.Model.Models;
+namespace BookManagement.Model.Models.FluentModels;
 
-public class Author
+public class Fluent_Author
 {
-    [Key]
     public int Author_Id { get; set; }
-    [MaxLength(50)]
-    [Required]
     public string FirstName { get; set; }
-    [Required]
     public string LastName { get; set; }
     
     public DateTime BirthDate { get; set; }
     
     public string Location { get; set; }
     
-    [NotMapped]
     public string FullName
     {
         get
@@ -25,5 +20,4 @@ public class Author
             return $"{FirstName} {LastName}";
         }
     }
-    public List<BookAuthorMap> BookAuthorMap { set; get; }
 }

@@ -4,6 +4,7 @@ using BookManagement.Data.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookManagement.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231223201239_asassaassa")]
+    partial class asassaassa
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -81,7 +84,8 @@ namespace BookManagement.Data.Migrations
 
                     b.HasKey("IDBook");
 
-                    b.HasIndex("BookDetail_Id");
+                    b.HasIndex("BookDetail_Id")
+                        .IsUnique();
 
                     b.HasIndex("Publisher_Id");
 
@@ -111,9 +115,6 @@ namespace BookManagement.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookDetail_Id"));
 
-                    b.Property<int>("BookIDBook")
-                        .HasColumnType("int");
-
                     b.Property<int>("NumberOfChapter")
                         .HasColumnType("int");
 
@@ -124,8 +125,6 @@ namespace BookManagement.Data.Migrations
                         .HasColumnType("float");
 
                     b.HasKey("BookDetail_Id");
-
-                    b.HasIndex("BookIDBook");
 
                     b.ToTable("BookDetails");
                 });
@@ -223,9 +222,6 @@ namespace BookManagement.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookDetail_Id"));
 
-                    b.Property<int>("Book_Id")
-                        .HasColumnType("int");
-
                     b.Property<int>("NumberOfChapter")
                         .HasColumnType("int");
 
@@ -236,9 +232,6 @@ namespace BookManagement.Data.Migrations
                         .HasColumnType("float");
 
                     b.HasKey("BookDetail_Id");
-
-                    b.HasIndex("Book_Id")
-                        .IsUnique();
 
                     b.ToTable("Fluent_BookDetail");
                 });
@@ -306,9 +299,9 @@ namespace BookManagement.Data.Migrations
 
             modelBuilder.Entity("BookManagement.Model.Models.Book", b =>
                 {
-                    b.HasOne("BookManagement.Model.Models.FluentModels.Fluent_BookDetail", "BookDetail")
-                        .WithMany()
-                        .HasForeignKey("BookDetail_Id")
+                    b.HasOne("BookManagement.Model.Models.BookDetail", "BookDetail")
+                        .WithOne("Book")
+                        .HasForeignKey("BookManagement.Model.Models.Book", "BookDetail_Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -342,28 +335,6 @@ namespace BookManagement.Data.Migrations
                     b.Navigation("Book");
                 });
 
-            modelBuilder.Entity("BookManagement.Model.Models.BookDetail", b =>
-                {
-                    b.HasOne("BookManagement.Model.Models.Book", "Book")
-                        .WithMany()
-                        .HasForeignKey("BookIDBook")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Book");
-                });
-
-            modelBuilder.Entity("BookManagement.Model.Models.FluentModels.Fluent_BookDetail", b =>
-                {
-                    b.HasOne("BookManagement.Model.Models.FluentModels.Fluent_Book", "Book")
-                        .WithOne("FluentBookDetail")
-                        .HasForeignKey("BookManagement.Model.Models.FluentModels.Fluent_BookDetail", "Book_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Book");
-                });
-
             modelBuilder.Entity("BookManagement.Model.Models.Author", b =>
                 {
                     b.Navigation("BookAuthorMap");
@@ -374,9 +345,9 @@ namespace BookManagement.Data.Migrations
                     b.Navigation("BookAuthorMap");
                 });
 
-            modelBuilder.Entity("BookManagement.Model.Models.FluentModels.Fluent_Book", b =>
+            modelBuilder.Entity("BookManagement.Model.Models.BookDetail", b =>
                 {
-                    b.Navigation("FluentBookDetail")
+                    b.Navigation("Book")
                         .IsRequired();
                 });
 

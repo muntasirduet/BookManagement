@@ -1,15 +1,11 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace BookManagement.Model.Models;
+namespace BookManagement.Model.Models.FluentModels;
 
-public class Publisher
-{
-    [Key]
+public class Fluent_Publisher
+{ 
     public int Publisher_Id { get; set; }
-    [MaxLength(50)]
-    [Required]
     public string Name { get; set; }
-    
     public string Location { get; set; }
-    public List<Book> Books { get; set; }
+
 }
